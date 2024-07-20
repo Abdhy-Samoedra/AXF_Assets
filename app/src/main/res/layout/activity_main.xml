@@ -11,6 +11,7 @@
         android:orientation="vertical"
         android:gravity="center_horizontal"
         android:layout_centerInParent="true">
+<!--        djkndjndjnjff-->
 
         <TextView
             android:layout_width="match_parent"
