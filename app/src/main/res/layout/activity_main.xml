@@ -12,13 +12,17 @@
         android:gravity="center_horizontal"
         android:layout_centerInParent="true">
 
-        <TextView
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:layout_marginTop="40dp"
-            android:textSize="25sp"
-            android:text="Register"/>
+            android:layout_height="300dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/logo">
+
+        </ImageView>
 
         <TextView
             android:layout_width="match_parent"
@@ -32,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="13dp"
-            android:hint="Input Username"
+            android:hint="input Username"
             android:paddingStart="12dp"
             android:layout_marginBottom="13dp"
             android:inputType="text"
@@ -52,7 +56,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:paddingStart="12dp"
-            android:hint="Input Password"
+            android:hint="input Password"
             android:inputType="textPassword"
             android:background="@drawable/rounded_edit_button"
             android:id="@+id/password_user"/>
@@ -63,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="30dp"
         android:backgroundTint="@color/buttonColor"
-        android:text="Submit" />
+        android:text="Login" />
 </RelativeLayout>
