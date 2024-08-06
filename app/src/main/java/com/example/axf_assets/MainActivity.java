@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -37,6 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 else if(password_input.length() < 8)
                 {
                     Toast.makeText(MainActivity.this, "Password Must Be Greater Than 7", Toast.LENGTH_SHORT).show();
+                }else
+                {
+                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+                    intent.putExtra("USERNAME", username_input.getText().toString());
+                    startActivity(intent);
                 }
             }
         });

@@ -32,7 +32,6 @@
         android:layout_below="@id/profile_image"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="Hi, [[username]]"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/black" />
@@ -43,7 +42,6 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/username_greeting"
         android:layout_centerHorizontal="true"
-        android:text="@[[username]]"
         android:textSize="16sp"
         android:textColor="@color/buttonColor" />
 
@@ -89,6 +87,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_edit_button"
             android:inputType="phone"
+            android:hint="input Phone Number"
             android:paddingStart="12dp" />
 
         <TextView
@@ -107,6 +106,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_edit_button"
             android:inputType="text"
+            android:hint="input Job"
             android:paddingStart="12dp" />
 
         <TextView
@@ -125,7 +125,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_edit_button"
             android:inputType="text"
+            android:hint="input Address"
             android:paddingStart="12dp" />
     </LinearLayout>
-
 </RelativeLayout>
