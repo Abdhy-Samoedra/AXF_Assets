@@ -8,7 +8,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     TextView usernameGreeting;
     TextView usernameHandle;
-    TextView email_user;
+    TextView emailUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         usernameGreeting = findViewById(R.id.username_greeting);
         usernameHandle = findViewById(R.id.username_handle);
+        emailUser = findViewById(R.id.email_user);
 
         // Get the username from the Intent
         String username = getIntent().getStringExtra("USERNAME");
@@ -25,7 +26,7 @@ public class ProfileActivity extends AppCompatActivity {
         if (username != null) {
             usernameGreeting.setText("Hi, " + username);
             usernameHandle.setText("@" + username);
-//            email_user.setText(username + "@gmail.com");
+            emailUser.setText(username + "@gmail.com");
         }
     }
 }
