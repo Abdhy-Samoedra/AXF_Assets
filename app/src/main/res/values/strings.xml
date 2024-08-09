@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">AXF_assets</string>
+    <string name="default_spinner_hint">Select an option</string>
+    <string-array name="payment">
+        <item>Select an option</item>
+        <item>Master Card</item>
+        <item>Gopay</item>
+        <item>Ovo</item>
+        <item>Shopee Pay</item>
+        <item>BCA Virtual Account</item>
+    </string-array>
+    <string name="desc1">Engulfed in fiery reds and oranges, this skin transforms your rifle into a blazing inferno. The scorching design symbolizes relentless power, leaving a trail of devastation in its wake.
+
+</string>
+
+    <string name="desc2">Bolts of crackling electricity and neon blue accents make this sniper rifle look both shocking and lethal. It strikes fear into enemies, delivering electrifying precision from any distance.
+</string>
+
+    <string name="desc3">Wrapped in dark, snake-like scales and dripping with venom, this dagger exudes a deadly aura. Its design strikes fear, promising a swift and poisonous end to adversaries.
+</string>
+
+    <string name="desc4">Covered in icy blue frost and intricate snowflakes, this shotgun radiates a chilling aura. Each devastating blast seems to freeze opponents, encapsulating the power of winter wrath.
+
+</string>
+
+    <string name="desc5">Adorned with intricate golden patterns and a radiant glow, this pistol shines brilliantly. Its opulent design represents unparalleled luxury and deadly precision, merging elegance with lethality.
+
+</string>
+    <string name="desc6">Futuristic circuitry and glowing neon hexagons cover this SMG, merging advanced technology with raw firepower. Its high-tech design signifies the future of combat excellence and dominance.
+
+</string>
+
+    <string name="desc7">Decorated with emerald scales and dragon motifs, this crossbow exudes mythical strength. Each shot is imbued with the legendary power of dragons, invoking fear and respect from foes.
+</string>
+
+    <string name="desc8">Fiery feathers and intense flames adorn this bow, representing the unquenchable spirit of the phoenix. Its design symbolizes rebirth and relentless power, making each arrow a burning promise.
+</string>
+
+    <string name="desc9">Massive and imposing, this hammer is etched with storm clouds and lightning bolts. It channels the unstoppable force of nature, embodying the raw power of thunderous storms.
+</string>
+
+    <string name="desc10">Dark crimson and black with intricate lunar symbols, this axe is shrouded in eerie beauty. It promises deadly precision, cutting through darkness and opponents with devastating elegance.
+
+
+
+
+
+</string>
 </resources>

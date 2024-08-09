@@ -2,6 +2,7 @@ package com.example.axf_assets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,15 +39,19 @@ public class MainActivity extends AppCompatActivity {
                 else if(password_input.length() < 8)
                 {
                     Toast.makeText(MainActivity.this, "Password Must Be Greater Than 7", Toast.LENGTH_SHORT).show();
-                }else
-                {
-                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-                    intent.putExtra("USERNAME", username_input.getText().toString());
+                }
+//                else
+//                {
+//                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+//                    intent.putExtra("USERNAME", username_input.getText().toString());
+//                    startActivity(intent);
+//                }
+                else {
+                    Intent intent = new Intent(MainActivity.this, ListItem.class);
                     startActivity(intent);
                 }
             }
         });
-
 //        for checking the username input
     }
 }
