@@ -23,7 +23,7 @@
         android:layout_below="@id/profile_title"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:src="@drawable/profile" />
+        android:src="@drawable/profileimg" />
 
     <TextView
         android:id="@+id/username_greeting"
@@ -87,7 +87,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_edit_button"
             android:inputType="phone"
-            android:hint="input Phone Number"
+            android:text="081261420300"
             android:paddingStart="12dp" />
 
         <TextView
@@ -106,7 +106,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_edit_button"
             android:inputType="text"
-            android:hint="input Job"
+            android:text="Student"
             android:paddingStart="12dp" />
 
         <TextView
@@ -125,7 +125,7 @@
             android:layout_height="40dp"
             android:background="@drawable/rounded_edit_button"
             android:inputType="text"
-            android:hint="input Address"
+            android:text="Jl. Pakuan No 3"
             android:paddingStart="12dp" />
     </LinearLayout>
 </RelativeLayout>
