@@ -1,5 +1,4 @@
 package com.example.axf_assets;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,6 +11,12 @@ import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.axf_assets.CustomSpinner;
+import com.example.axf_assets.HomeActivity;
+import com.example.axf_assets.ListItem;
+import com.example.axf_assets.ProfileActivity;
+import com.example.axf_assets.R;
 
 public abstract class SpinnerLogic extends AppCompatActivity {
 
@@ -29,18 +34,31 @@ public abstract class SpinnerLogic extends AppCompatActivity {
         hamburger_button = findViewById(R.id.hamburger_button);
         username = findViewById(R.id.username_input);
 
-        // Image resources
-        int[] images = {
+        // Image resources (Adjust accordingly)
+        int[] images = {// Placeholder image
+                0,
                 R.drawable.home_image,
                 R.drawable.items,
                 R.drawable.profile,
                 R.drawable.log_out,
         };
 
-        // Spinner items
+        // Spinner items (Adjust accordingly)
         String[] items = getResources().getStringArray(R.array.spinner_items);
 
-        CustomSpinner adapter = new CustomSpinner(this, items, images);
+// Create a new array to hold the modified items
+        String[] modifiedItems = new String[items.length+1];
+
+// Iterate over the items array and modify each item
+        for (int i = 0; i < items.length; i++) {
+            // Append index + 1 to the item
+            modifiedItems[i+1] = items[i];
+        }
+        modifiedItems[0] = "Select The Items";
+
+
+        // Create adapter and set it to the Spinner
+        CustomSpinner adapter = new CustomSpinner(this, modifiedItems, images);
         spinner_homepage.setAdapter(adapter);
 
         hamburger_button.setOnClickListener(v -> spinner_homepage.performClick());
@@ -49,11 +67,17 @@ public abstract class SpinnerLogic extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("SpinnerSelection", "Item selected at position: " + position);
+
                 if (isSpinnerInitial) {
                     isSpinnerInitial = false;
                     return;
                 }
-                handleSpinnerSelection(position);
+
+                if (position == 0) {
+                    return;
+                }
+
+                handleSpinnerSelection(position - 1); // Adjust index if necessary
             }
 
             @Override
@@ -84,6 +108,8 @@ public abstract class SpinnerLogic extends AppCompatActivity {
                 break;
             case 3: // Log Out
                 Toast.makeText(this, "Logging out...", Toast.LENGTH_SHORT).show();
+                break;
+            default:
                 break;
         }
     }

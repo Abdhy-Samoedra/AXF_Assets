@@ -4,16 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-public class ProfileActivity extends AppCompatActivity {
+public class ProfileActivity extends SpinnerLogic {
 
     TextView usernameGreeting;
     TextView usernameHandle;
     TextView emailUser;
 
+    protected int getLayoutResourceId() {
+        return R.layout.activity_profile;
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
 
         usernameGreeting = findViewById(R.id.username_greeting);
         usernameHandle = findViewById(R.id.username_handle);
@@ -29,4 +32,5 @@ public class ProfileActivity extends AppCompatActivity {
             emailUser.setText(username + "@gmail.com");
         }
     }
+
 }
