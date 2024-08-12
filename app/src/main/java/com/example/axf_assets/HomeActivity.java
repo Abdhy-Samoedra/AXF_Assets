@@ -5,6 +5,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.util.TypedValue;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -23,6 +24,7 @@ public class HomeActivity extends SpinnerLogic implements TabLayout.OnTabSelecte
     ViewPager viewPager;
     TabPageAdapter tabPageAdapter;
     ViewFlipper carousel;
+    TextView username;
 
 //
     @Override
@@ -38,11 +40,13 @@ public class HomeActivity extends SpinnerLogic implements TabLayout.OnTabSelecte
 
         carousel = findViewById(R.id.carousellab);
 
+
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
-
+        username = findViewById(R.id.username_input);
         viewPager.setAdapter(tabPageAdapter);
         tabLayout.setupWithViewPager(viewPager);
+        username.setText(getIntent().getStringExtra("USERNAME"));
 
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);
@@ -50,6 +54,7 @@ public class HomeActivity extends SpinnerLogic implements TabLayout.OnTabSelecte
                 TextView tabTextView = new TextView(this);
                 tabTextView.setText(tab.getText());
                 tabTextView.setGravity(Gravity.CENTER);
+
                 Typeface dmSansTypeface = ResourcesCompat.getFont(this, R.font.dm_sans);
                 tabTextView.setTypeface(dmSansTypeface);
                 // Adjust font size

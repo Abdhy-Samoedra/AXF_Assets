@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ public abstract class SpinnerLogic extends AppCompatActivity {
     protected Spinner spinner_homepage;
     protected ImageButton hamburger_button;
     private boolean isSpinnerInitial = true;
+    protected TextView username;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +27,7 @@ public abstract class SpinnerLogic extends AppCompatActivity {
 
         spinner_homepage = findViewById(R.id.spinner_homepage);
         hamburger_button = findViewById(R.id.hamburger_button);
+        username = findViewById(R.id.username_input);
 
         // Image resources
         int[] images = {
@@ -73,7 +76,11 @@ public abstract class SpinnerLogic extends AppCompatActivity {
                 break;
             case 2: // Profile
                 Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(this, ProfileActivity.class));
+
+                String usernameText = username.getText().toString();
+                Intent intent = new Intent(this, ProfileActivity.class);
+                intent.putExtra("USERNAME", usernameText);
+                startActivity(intent);
                 break;
             case 3: // Log Out
                 Toast.makeText(this, "Logging out...", Toast.LENGTH_SHORT).show();
