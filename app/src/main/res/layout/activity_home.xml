@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"> <!-- Set orientation to vertical for stacking -->
+
+                <TextView
+                    android:id="@+id/Welcome_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Welcome Back, " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wade Farren"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:id="@+id/hamburger_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/hamburger"
+                    android:background="@android:color/transparent"
+                    android:contentDescription="@string/hamburger_button_desc"
+                    android:layout_alignParentEnd="true"
+                    android:elevation="11dp"
+                    android:layout_marginEnd="20dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    >
+
+                    <Spinner
+                        android:id="@+id/spinner_homepage"
+                        android:layout_width="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="20dp"
+                        android:elevation="10dp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ViewFlipper
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:id="@+id/carousellab"
+                />
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/carousel_slider"
+                android:src="@drawable/carousel_slider"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Latest Released"
+                android:fontFamily="@font/dmsans_24pt_bold"
+                android:textColor="@color/textPrimary"
+                android:textSize="24sp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/banner1"
+                    android:layout_width="160dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:src="@drawable/banner_1"
+                    android:layout_marginRight="20dp"/>
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/banner2"
+                    android:layout_width="160dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/banner_2" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Terms &amp; Conditions"
+                android:fontFamily="@font/dmsans_24pt_bold"
+                android:textColor="@color/textPrimary"
+                android:textSize="24sp"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="8dp"/>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tabLayout"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="?attr/colorSurface"
+                    app:tabBackground="@drawable/tab_selected"
+                    app:tabIndicator="@android:color/transparent"
+                    app:tabIndicatorHeight="0dp"
+                    app:tabSelectedTextColor="@android:color/white"
+                    app:tabTextAppearance="@style/CustomTabText" />
+            </androidx.viewpager.widget.ViewPager>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

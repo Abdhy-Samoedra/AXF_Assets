@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/styles.xml -->
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Custom tab text style -->
+    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:fontFamily">"@font/dmsans_24pt_bold"</item>
+    </style>
+
+    <!-- Custom tab selected text style -->
+    <style name="CustomTabTextSelected">
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+</resources>
