@@ -16,12 +16,51 @@
             android:layout_height="wrap_content">
 
             <!-- ImageView to display the image -->
-            <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/terms"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/terms"
-                android:scaleType="fitCenter"/>
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Terms"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/dmsans_24pt_bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:text="These terms and conditions (Terms) govern your access to and use of the AXForA marketplace (Marketplace), a platform for buying and selling game assets. By accessing or using the Marketplace, you agree to be bound by these Terms."
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/dmsans_24pt_regular"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Definitions"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/dmsans_24pt_bold"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"/>
+                <TextView
+                    android:layout_width="320dp"
+                    android:layout_height="wrap_content"
+                    android:text="Asset: Any digital content (e.g., models, textures, animations, sound effects) intended for use in video games.
+Buyer: A registered user who purchases Assets through the Marketplace.
+Seller: A registered user who uploads and sells Assets on the Marketplace.
+Content: Assets, information, text, data, images, audio, video, or other materials uploaded to the Marketplace."
+                    android:layout_marginStart="14dp"
+                    android:fontFamily="@font/dmsans_24pt_regular"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
         </HorizontalScrollView>
 
     </ScrollView>

@@ -2,12 +2,10 @@
     <string name="app_name">AXF_assets</string>
     <string name="default_spinner_hint">Select an option</string>
     <string-array name="payment">
-        <item>Select an option</item>
+        <item>--Choose Payment Method--</item>
+        <item>Visa</item>
         <item>Master Card</item>
-        <item>Gopay</item>
-        <item>Ovo</item>
-        <item>Shopee Pay</item>
-        <item>BCA Virtual Account</item>
+        <item>Credit Card</item>
     </string-array>
 
     <string-array name="spinner_items">
