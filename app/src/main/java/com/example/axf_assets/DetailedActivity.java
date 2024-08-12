@@ -78,7 +78,7 @@ public class DetailedActivity extends AppCompatActivity {
                 // Enhanced Validation
                 if (!isValidEmail(email)) {
                     showAlertDialog("Input Error", "Please input a valid email address.");
-                } else if (paymentMethod.equals("Select an option")) {
+                } else if (paymentMethod.equals("--Choose Payment Method--")) {
                     showAlertDialog("Selection Error", "Please choose a payment method.");
                 } else {
                     showSuccessDialog();
@@ -111,7 +111,7 @@ public class DetailedActivity extends AppCompatActivity {
                 .setPositiveButton("Go to Home", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Redirect to home page
-                        Intent intent = new Intent(DetailedActivity.this, MainActivity.class);
+                        Intent intent = new Intent(DetailedActivity.this, HomeActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                         finish();
