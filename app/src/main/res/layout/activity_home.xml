@@ -149,20 +149,7 @@
             <androidx.viewpager.widget.ViewPager
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayout"
-                    android:layout_width="200dp"
-                    android:layout_height="30dp"
-                    android:layout_marginBottom="8dp"
-                    android:background="?attr/colorSurface"
-                    app:tabBackground="@drawable/tab_selected"
-                    app:tabIndicator="@android:color/transparent"
-                    app:tabIndicatorHeight="0dp"
-                    app:tabSelectedTextColor="@android:color/white"
-                    app:tabTextAppearance="@style/CustomTabText" />
-            </androidx.viewpager.widget.ViewPager>
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
