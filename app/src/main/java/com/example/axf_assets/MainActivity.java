@@ -28,28 +28,28 @@ public class MainActivity extends AppCompatActivity {
         button_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(username_input.getText().toString().equals(""))
-                {
-                    Toast.makeText(MainActivity.this, "Username Can't Be Empty", Toast.LENGTH_SHORT).show();
-                }
-                else if(password_input.getText().toString().equals(""))
-                {
-                    Toast.makeText(MainActivity.this, "Password Can't Be Empty", Toast.LENGTH_SHORT).show();
-                }
-                else if(password_input.length() < 8)
-                {
-                    Toast.makeText(MainActivity.this, "Password Must Be Greater Than 7", Toast.LENGTH_SHORT).show();
-                }
-//                else
+//                if(username_input.getText().toString().equals(""))
 //                {
-//                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
-//                    intent.putExtra("USERNAME", username_input.getText().toString());
-//                    startActivity(intent);
+//                    Toast.makeText(MainActivity.this, "Username Can't Be Empty", Toast.LENGTH_SHORT).show();
 //                }
-                else {
-                    Intent intent = new Intent(MainActivity.this, ListItem.class);
+//                else if(password_input.getText().toString().equals(""))
+//                {
+//                    Toast.makeText(MainActivity.this, "Password Can't Be Empty", Toast.LENGTH_SHORT).show();
+//                }
+//                else if(password_input.length() < 8)
+//                {
+//                    Toast.makeText(MainActivity.this, "Password Must Be Greater Than 7", Toast.LENGTH_SHORT).show();
+//                }
+////                else
+////                {
+////                    Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+////                    intent.putExtra("USERNAME", username_input.getText().toString());
+////                    startActivity(intent);
+////                }
+//                else {
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     startActivity(intent);
-                }
+//                }
             }
         });
 //        for checking the username input
