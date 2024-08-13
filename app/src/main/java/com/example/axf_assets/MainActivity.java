@@ -3,6 +3,7 @@ package com.example.axf_assets;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -42,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putString("USERNAME", username_input.getText().toString());
+                    boolean isSaved = editor.commit();
+
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
                     intent.putExtra("USERNAME", username_input.getText().toString());
                     startActivity(intent);

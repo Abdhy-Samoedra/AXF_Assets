@@ -1,8 +1,10 @@
 package com.example.axf_assets;
 
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
@@ -34,19 +36,20 @@ public class HomeActivity extends SpinnerLogic implements TabLayout.OnTabSelecte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         tabPageAdapter = new TabPageAdapter(getSupportFragmentManager());
-
         carousel = findViewById(R.id.carousellab);
-
-
         tabLayout = findViewById(R.id.tabLayout);
         viewPager = findViewById(R.id.viewPager);
         username = findViewById(R.id.username_input);
         viewPager.setAdapter(tabPageAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        username.setText(getIntent().getStringExtra("USERNAME"));
+
+//        this is for assign username input
+        SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
+        String username_value = sharedPreferences.getString("USERNAME", "Guest");
+        username.setText(username_value);
+        Log.d("username", "Retrieved username: " + username_value);
+
 
         for (int i = 0; i < tabLayout.getTabCount(); i++) {
             TabLayout.Tab tab = tabLayout.getTabAt(i);

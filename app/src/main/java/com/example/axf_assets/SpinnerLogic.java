@@ -79,7 +79,6 @@ public abstract class SpinnerLogic extends AppCompatActivity {
 
                 handleSpinnerSelection(position - 1); // Adjust index if necessary
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Do nothing
@@ -96,18 +95,16 @@ public abstract class SpinnerLogic extends AppCompatActivity {
                 startActivity(new Intent(this, HomeActivity.class));
                 break;
             case 1: // Items
+                Toast.makeText(this, "Items Selected", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, ListItem.class));
                 break;
             case 2: // Profile
                 Toast.makeText(this, "Profile selected", Toast.LENGTH_SHORT).show();
-
-                String usernameText = username.getText().toString();
-                Intent intent = new Intent(this, ProfileActivity.class);
-                intent.putExtra("USERNAME", usernameText);
-                startActivity(intent);
+                startActivity(new Intent(this, ProfileActivity.class));
                 break;
             case 3: // Log Out
                 Toast.makeText(this, "Logging out...", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, MainActivity.class));
                 break;
             default:
                 break;
