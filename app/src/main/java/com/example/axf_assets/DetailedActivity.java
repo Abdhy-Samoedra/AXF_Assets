@@ -107,11 +107,11 @@ public class DetailedActivity extends AppCompatActivity {
     private void showSuccessDialog() {
         new AlertDialog.Builder(this)
                 .setTitle("Success")
-                .setMessage("Payment successful!")
-                .setPositiveButton("Go to Home", new DialogInterface.OnClickListener() {
+                .setMessage("Confirmation email has been set to your email!")
+                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         // Redirect to home page
-                        Intent intent = new Intent(DetailedActivity.this, HomeActivity.class);
+                        Intent intent = new Intent(DetailedActivity.this, ListItem.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
                         startActivity(intent);
                         finish();
