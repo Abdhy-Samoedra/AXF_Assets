@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
                     boolean isSaved = editor.commit();
 
                     Intent intent = new Intent(MainActivity.this, HomeActivity.class);
-                    intent.putExtra("USERNAME", username_input.getText().toString());
                     startActivity(intent);
                 }
             }

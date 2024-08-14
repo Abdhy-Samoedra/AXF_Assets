@@ -19,16 +19,12 @@
                 android:id="@+id/Welcome_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Welcome Back, " />
+                android:text="Profile"
+                android:textSize="25dp"
+                android:fontFamily="@font/dm_sans"
+                android:textColor="@color/buttonColor"
+                />
 
-            <TextView
-                android:id="@+id/username_input"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wade Farren"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
         </LinearLayout>
 
         <RelativeLayout

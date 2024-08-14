@@ -21,10 +21,8 @@ public class ProfileActivity extends SpinnerLogic {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 //        this is for set up the username in profile
-        username = findViewById(R.id.username_input);
         SharedPreferences sharedPreferences = getSharedPreferences("UserPrefs", MODE_PRIVATE);
         String username_value = sharedPreferences.getString("USERNAME", "Guest");
-        username.setText(username_value);
 
         // Initialize TextViews
         usernameGreeting = findViewById(R.id.username_greeting);
@@ -32,8 +30,8 @@ public class ProfileActivity extends SpinnerLogic {
         emailUser = findViewById(R.id.email_user);
 
 
-        usernameGreeting.setText("Hi, " + username.getText().toString());
-        usernameHandle.setText("@" + username.getText().toString());
-        emailUser.setText(username.getText().toString() + "@gmail.com");
+        usernameGreeting.setText("Hi, " + username_value);
+        usernameHandle.setText("@" + username_value);
+        emailUser.setText(username_value + "@gmail.com");
     }
 }
